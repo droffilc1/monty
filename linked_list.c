@@ -14,9 +14,8 @@ stack_t *queue_node(stack_t **stack, const int n)
 
 	if (!new)
 	{
-		fprintf(stderr, "Error: memory allocation failed\n");
 		free(new);
-		exit(EXIT_FAILURE);
+		return (NULL);
 	}
 	new->n = n;
 
@@ -55,9 +54,8 @@ stack_t *add_node(stack_t **stack, const int n)
 
 	if (!new)
 	{
-		fprintf(stderr, "Error: memory allocation failed\n");
 		free(new);
-		exit(EXIT_FAILURE);
+		return (NULL);
 	}
 	new->n = n;
 
