@@ -14,8 +14,9 @@ stack_t *queue_node(stack_t **stack, const int n)
 
 	if (!new)
 	{
+		fprintf(stderr, "Error: malloc failed\n");
 		free(new);
-		return (NULL);
+		exit(EXIT_FAILURE);
 	}
 	new->n = n;
 
@@ -54,8 +55,9 @@ stack_t *add_node(stack_t **stack, const int n)
 
 	if (!new)
 	{
+		fprintf(stderr, "Error: malloc failed\n");
 		free(new);
-		return (NULL);
+		exit(EXIT_FAILURE);
 	}
 	new->n = n;
 
