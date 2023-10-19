@@ -11,6 +11,7 @@
 	{                         \
 		{"push", push},     \
 		    {"pall", pall}, \
+		    {"pint", pint}, \
 		{                   \
 			NULL, NULL    \
 		}                   \
@@ -69,6 +70,7 @@ int is_digit(char *string);
 
 void push(stack_t **stack, unsigned int line);
 void pall(stack_t **stack, unsigned int line);
+void pint(stack_t **stack, unsigned int line);
 void opcode(stack_t **stack, char *str, unsigned int line);
 
 #endif
