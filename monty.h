@@ -13,6 +13,7 @@
 		    {"pall", pall}, \
 		    {"pint", pint}, \
 		    {"pop", pop},   \
+		    {"swap", swap},  \
 		{                   \
 			NULL, NULL    \
 		}                   \
@@ -73,6 +74,7 @@ void push(stack_t **stack, unsigned int line);
 void pall(stack_t **stack, unsigned int line);
 void pint(stack_t **stack, unsigned int line);
 void pop(stack_t **stack, unsigned int line);
+void swap(stack_t **stack, unsigned int line);
 void opcode(stack_t **stack, char *str, unsigned int line);
 
 #endif
