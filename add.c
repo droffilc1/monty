@@ -5,7 +5,7 @@
  * @stack: stack given by main
  * @line: line counter
  *
- * Return: void
+ * Return: nothing
  */
 void _add(stack_t **stack, unsigned int line)
 {
