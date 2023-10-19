@@ -18,6 +18,7 @@
 		    {"nop", nop},    \
 		    {"sub", _sub},    \
 		    {"div", _div},    \
+		    {"mul", _mul},    \
 		{                   \
 			NULL, NULL    \
 		}                   \
@@ -83,6 +84,7 @@ void _add(stack_t **stack, unsigned int line);
 void _sub(stack_t **stack, unsigned int line);
 void nop(stack_t **stack, unsigned int line);
 void _div(stack_t **stack, unsigned int line);
+void _mul(stack_t **stack, unsigned int line);
 void opcode(stack_t **stack, char *str, unsigned int line);
 
 #endif
