@@ -33,6 +33,6 @@ void opcode(stack_t **stack, char *str, unsigned int line)
 		}
 		i++;
 	}
-	fprintf(stderr, "L%d, unkown instruction %s\n", line, str);
+	fprintf(stderr, "L%d: unknown instruction %s\n", line, str);
 	exit(EXIT_FAILURE);
 }
