@@ -11,6 +11,7 @@
 void opcode(stack_t **stack, char *str, unsigned int line)
 {
 	int i = 0;
+
 	instruction_t op[] = INSTRUCTIONS;
 
 	if (!strcmp(str, "stack"))
