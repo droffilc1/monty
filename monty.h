@@ -23,6 +23,7 @@
 		    {"mod", _mod},    \
 		    {"pchar", pchar}, \
 		    {"pstr", pstr},   \
+		    {"rotl", rotl},   \
 		{                     \
 			NULL, NULL    \
 		}                     \
@@ -92,6 +93,7 @@ void _mul(stack_t **stack, unsigned int line);
 void _mod(stack_t **stack, unsigned int line);
 void pchar(stack_t **stack, unsigned int line);
 void pstr(stack_t **stack, __attribute__((unused)) unsigned int line);
+void rotl(stack_t **stack, __attribute__((unused)) unsigned int line);
 void opcode(stack_t **stack, char *str, unsigned int line);
 
 #endif
