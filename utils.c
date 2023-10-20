@@ -8,15 +8,20 @@
  */
 int is_digit(char *string)
 {
-	if (!string || *string == '\0')
-		return (0);
-	if (*string == '-')
-		string++;
-	while (*string)
+	int i = 0;
+
+	if (string != NULL)
 	{
-		if (isdigit(*string) == 0)
-			return (0);
-		string++;
+		if (string[i] == '-')
+			i++;
+		while (string[i])
+		{
+			if (string[i] < 48 || string[i] > 57)
+				return (0);
+			i++;
+		}
 	}
+	else
+		return (0);
 	return (1);
 }
