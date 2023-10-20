@@ -1,40 +1,42 @@
 #ifndef MONTY_H
 #define MONTY_H
+#define _POSIX_C_SOURCE 200809L
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stddef.h>
 #include <ctype.h>
 
-#define _GNU_SOURCE
-#define INSTRUCTIONS            \
-	{                         \
-		{"push", push},	   \
-		    {"pall", pall}, \
-		    {"pint", pint}, \
-		    {"pop", pop},   \
-		    {"swap", swap},  \
-		    {"add", _add},   \
-		    {"nop", nop},    \
+#define INSTRUCTIONS                  \
+	{                             \
+		{"push", push},       \
+		    {"pall", pall},   \
+		    {"pint", pint},   \
+		    {"pop", pop},     \
+		    {"swap", swap},   \
+		    {"add", _add},    \
+		    {"nop", nop},     \
 		    {"sub", _sub},    \
 		    {"div", _div},    \
 		    {"mul", _mul},    \
 		    {"mod", _mod},    \
-		{                   \
+		    {"pchar", pchar}, \
+		{                     \
 			NULL, NULL    \
-		}                   \
+		}                     \
 	}
 
 extern int status;
 /**
-* struct stack_s - doubly linked list representation of a stack (or queue)
-* @n: integer
-* @prev: points to the previous element of the stack (or queue)
-* @next: points to the next element of the stack (or queue)
-*
-* Description: doubly linked list node structure
-* for stack, queues, LIFO, FIFO
-*/
+ * struct stack_s - doubly linked list representation of a stack (or queue)
+ * @n: integer
+ * @prev: points to the previous element of the stack (or queue)
+ * @next: points to the next element of the stack (or queue)
+ *
+ * Description: doubly linked list node structure
+ * for stack, queues, LIFO, FIFO
+ */
 typedef struct stack_s
 {
 	int n;
@@ -56,12 +58,12 @@ typedef struct instruction_s
 } instruction_t;
 
 /**
-* struct help - argument for the current opcode
-* @data_struct: stack mode, stack (default) and queue
-* @argument: the arguments of the string
-*
-* Description: global structure used to pass data around the functions easily
-*/
+ * struct help - argument for the current opcode
+ * @data_struct: stack mode, stack (default) and queue
+ * @argument: the arguments of the string
+ *
+ * Description: global structure used to pass data around the functions easily
+ */
 typedef struct help
 {
 	int data_struct;
@@ -87,6 +89,7 @@ void nop(stack_t **stack, unsigned int line);
 void _div(stack_t **stack, unsigned int line);
 void _mul(stack_t **stack, unsigned int line);
 void _mod(stack_t **stack, unsigned int line);
+void pchar(stack_t **stack, unsigned int line);
 void opcode(stack_t **stack, char *str, unsigned int line);
 
 #endif
