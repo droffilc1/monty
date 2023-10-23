@@ -96,6 +96,8 @@ To get a deeper undestanding of how stacks and queues work using a doubly linked
 
 [Data Structures and Algorithms](https://www.youtube.com/playlist?list=PLdo5W4Nhv31bbKJzrsKfMpo_grxuLl8LU)
 
+[Brainf*ck](https://en.wikipedia.org/wiki/Brainfuck)
+
 ## Contributors
 
 This project was created by [@droffilc1](https://www.github.com/droffilc1)
